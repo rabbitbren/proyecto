@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* font-family: 'Comfortaa', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+:root {
+    --color-principal: #FDE74C;
+    --color-secundario: #1D1128;
+    --color-fondo: #F3F3F3;
+    --color-acento: #744FC6;
+    --color-font: #353535;
+    --ff-principal: 'Comfortaa';
+    --ff-secundaria: 'Ubuntu';
+    --ff-terciaria: 'Montserrat';
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    background: #d8d8d8;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url(https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/90795.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
+} 
+
+
+/* seccion de propagan en la cabecera de la pagina */
+.propaganda {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 85% 15%;
+}
+.propaganda  .imagen {
+    width: 100%;
+    overflow: hidden;
+}
+.propaganda img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.propaganda > p {
+    width: 100%;
+    height: 100%;
+    background: var(--color-acento);
+    color: var(--color-fondo);
+    font-size: 3rem;
+    text-align: center;
+    font-family: var(--ff-principal);
+    padding: 0.3em 0;
+}
+
+
+.orden {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 8% 84% 8%;
+    grid-template-rows: 15% 85%;
+    padding: 2em 0 3em 0;
+}
+.orden h4 {
+    grid-column: 2/ span 3;
+    display: flex;
+    align-self: center;
+    font-size: 1.5em;
+    color: var(--color-secundario);
+    font-family: var(--ff-secundaria);
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100%;
+    column-gap: 1em;
+}
+.miniaturas {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    box-shadow: 0 0.3em 1em var(--color-font);
+    cursor: pointer;
+}
+.minitura {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.minitura img {
+    width: 100%;
+    height: 100%;
+    object-position: top center;
+    object-fit: cover;
+}
+.minitura img:hover {
+    opacity: 0.8;
+}
+.informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 0.2em;
+}
+.informacion span {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: var(--ff-secundaria);
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+}
+.deslizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deslizar i {
+    font-size: 2em;
+    color: var(--color-secundario);
+}
+.deslizar i:hover {
+    color: var(--color-principal);
+}
+
+
+/* video introduccion a las fases */
+.video__movie {
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-secundario);
+}
+
+
+/* fases de peliculas por anio */
+.fases {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    row-gap: 2em;
+    padding: 1em 0;
+}
+.fases__tres {
+    grid-template-rows: repeat(11, 1fr);
+}
+.fases__cuatro {
+    grid-template-rows: repeat(7, 1fr);
+}
+
+
+/* tarjeta de peliculas  ordenas por fase */
+.fase {
+    background: #f4f4f4;
+    width: 84%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+    padding-top: 1em;
+    box-shadow: 0 0.3em 1em var(--color-font);
+}
+.fase__estreno{
+    background: linear-gradient(rgba(27, 19, 40, 1), rgb(29, 27, 40, 0.5));
+}
+.imagenC {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    background: lightgreen;
+}
+.imagenC img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.textoC {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--ff-secundaria);
+    color: var(--color-secundario);
+    font-size: 0.5;
+    overflow: auto;
+    text-align: justify;
+    row-gap: .8em;
+}
+.textoC h3 {
+    font-size: 1.8rem;
+    font-family: var(--ff-principal);
+}
+.textoC__estreno {
+    color: var(--color-fondo);
+}
+
+
+
+.extra {
+    width: 100%;
+    min-height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-items: center;
+    align-items: center;
+}
+.contenedorE {
+    width: 80%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    border-top: 0.1em var(--color-secundario) solid;
+    padding: 0.5em 0;
+    cursor: pointer;
+    
+}
+.contenedorE:hover {
+    background: rgba(29, 19, 40, .1);
+    border-top: .1em transparent solid;
+    transition: all 500ms ease-out;
+}
+.imagenE {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.imagenE > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contenedorE:hover > .imagenE img {
+    transform: scale(1.3);
+    transition: all 500ms ease-out;
+}
+.titulo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.titulo > span {
+    font-size: 1.3em;
+    font-family: var(--ff-principal);
+}
+
+
+.redes__vertical {
+    display: flex;
+    width: 5%;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    bottom: 8%;
+    row-gap: 1em;
+    border: none;
+}
+.iconos__redes-posicion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.iconos__redes-posicion a > i {
+    font-size: 2.4rem;
+}
+
+
+@media only screen and (max-width: 1120px) {
+    .propaganda > p {
+        font-size: 2.5rem;
+    }
+}
+
+/* tres break points principales */
+@media only screen and (max-width: 992px) {
+    .propaganda > p {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .orden {
+        height: 70vh;
+    }
+    .orden h4 {
+        font-size: 1.2em;
+    }
+    .contenedor {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1em;
+    }
+    .miniaturas_quinto {
+        display: none;
+    }
+    .informacion {
+        padding: .1em;
+    }
+    .informacion span {
+        font-size: 0.75rem;
+    }
+    .deslizar i {
+        font-size: 1.6em;
+    }
+
+
+    .fase {
+        height: 85vh;
+        padding-top: 0;
+    }
+    .textoC {
+        width: 95%;
+        font-size: .9rem;
+        padding-right: 0.8em;
+    }
+
+
+    .titulo > span {
+        font-size: 1.1rem;
+        font-family: var(--ff-secundaria);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .propaganda > p {
+        font-size: 1.2rem;
+    }
+    .fases {
+        background: var(--color-secundario);
+    }
+    .fase {
+        width: 95%;
+        height: 60vh;
+        grid-template-columns: 25% 75%;
+    }
+    .textoC > h3 {
+        font-size: 1.5rem;
+    }
+    .imagenC {
+        width: 100%;
+        height: 50%;
+        align-self: flex-start;
+
+    }
+
+    .titulo > span {
+        font-size: .99rem;
+    }
+    .iconos__redes-posicion a > i {
+        color: var(--color-acento);
+        padding-right: .5em;
+    }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .orden h4 {
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0.8em;
+    }
+    .miniaturas_cuarto {
+        display: none;
+    }
+
+
+    .fase {
+        grid-template-columns: 20% 80%;
+    }
+    .textoC > h3 {
+        font-size: 1.2rem;
+    }
+    .textoC > p {
+        font-size: .8rem;
+    }
+    .imagenC {
+        height: 40%;
+    }
+
+    .titulo > span {
+        font-size: .85rem;
+    }
+}

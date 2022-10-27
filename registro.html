@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8ecfee4750.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="serie.css">
+    <link rel="stylesheet" href="movie.css">
+    <link rel="stylesheet" href="registro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body>
+    <header class="cabecera">
+        <img src="./img/logo01.png" alt="logo">
+        <div class="navegador">
+            <a href="./index.html">Inicio</a>
+            <a href="./movie.html">Películas</a>
+            <a href="./serie.html">Series</a>
+            <a href="./noticia.html">Noticias</a>
+            <a href="#">Regístrate</a>
+        </div>
+    </header>
+
+    <form class="formulario">
+        <h2 class="titulo__formulario">Créa tú cuenta con</h2>
+        <div class="icon">
+            <div class="icon__formulario icon__formulario-azul"><i class="fa-brands fa-facebook-f"></i></div>
+            <div class="icon__formulario icon__formulario-rojo"><i class="fa-brands fa-google"></i></div>
+        </div>
+
+        <div class="linea">o introduce:</div>
+
+        <div class="contenedor__formulario">
+            <div class="formulario__group">
+                <input type="email" id="correo" class="formulario__input" placeholder=" ">
+                <label for="correo" class="formulario__label">Corréo electrónico</label>
+                <span class="formulario__line"></span>
+            </div>
+            <div class="formulario__group">
+                <input type="password" id="contrasenia" class="formulario__input" placeholder=" ">
+                <label for="contrasenia" class="formulario__label">Contraseña</label>
+                <span class="formulario__line"></span>
+            </div>
+
+            <input type="submit" class="formulario__submit" value="Sigin">
+        </div>
+        <p class="parrafo__formulario"> Si tiénes cuenta, <a href="#" class="link__formulario">conéctate</a>
+    </form>
+   
+    <footer class="footer">
+        <img src="./img/logo01.png" alt="">
+        <div class="info">
+            <a href=""> <span>Condiciones generales de uso</span></a>
+            <a href=""><span>Política de privacidad</span></a>
+            <a href=""><span>Política de cookies</span></a>
+            <a href=""><span>Públicidad</span></a>
+        </div>
+        <a href="#"><span>Contácto</span></a>
+        <div class="iconos">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* font-family: 'Comfortaa', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+:root {
+    --color-principal: #FDE74C;
+    --color-secundario: #1D1128;
+    --color-fondo: #F3F3F3;
+    --color-acento: #744FC6;
+    --color-font: #353535;
+    --ff-principal: 'Comfortaa';
+    --ff-secundaria: 'Ubuntu';
+    --ff-terciaria: 'Montserrat';
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: var(--color-secundario);
+}
+.formulario {
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    margin: 8em auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+}
+.icon {
+    width: 5em;
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.icon__formulario {
+    width: 45%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-secundario);
+    cursor: pointer;
+}
+.icon__formulario > .fa-brands {
+    color: #f4f4f4;
+}
+.icon__formulario-azul:hover {
+    background: var(--color-principal);
+    transition: all .3s ease-in;
+}
+.icon__formulario-rojo:hover {
+    background: var(--color-principal);
+    transition: all .3s ease-in;
+}
+.linea {
+    width: 100%;
+    height: 1.5em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: var(--ff-terciaria);
+}
+
+
+.titulo__formulario {
+    font-size: 1.6rem;
+    margin-bottom: .5em;
+    font-family: var(--ff-terciaria);
+}
+.parrafo__formulario {
+    font-weight: 300;
+}
+.parrafo__formulario{
+    padding-top: 10%;
+}
+
+.parrafo__formulario {
+    color: var(--color-secundario);
+    font-family: var(--ff-terciaria);
+}
+.link__formulario {
+    font-weight: 600;
+    color: var(--color-acento);
+    font-family: var(--ff-secundaria);
+}
+
+.contenedor__formulario {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+.formulario__group {
+    position: relative;
+    color: #353535;
+}
+.formulario__input {
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #353535;
+}
+.formulario__input:not(:placeholder-shown) {
+    color: #4d4646;
+}
+
+.formulario__input:focus + .formulario__label,
+.formulario__input:not(:placeholder-shown) + .formulario__label {
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #ffea00;
+}
+
+.formulario__label {
+    color: var(--color-acento);
+    font-family: var(--ff-terciaria);
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.formulario__submit {
+    background: #ffffff;
+    color: var(--color-secundario);
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: var(--ff-secundaria);
+    padding: .8em 0;
+    border-radius: .5em;
+    border: .08em var(--color-secundario) solid;
+    cursor: pointer;
+}
+.formulario__submit:hover {
+    background: var(--color-principal);
+    color: var(--color-fondo);
+    border: .1em transparent solid;
+    transition: all .3s ease-in;
+}
+.formulario__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-principal);
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .6s;
+}
+
+.formulario__input:focus ~ .formulario__line,
+.formulario__input:not(:placeholder-shown) ~ .formulario__line {
+    transform: scale(1);
+}
+
+
+@media (max-width:425px) {
+    .titulo__formulario {
+        font-size: 1.8rem;
+    }
+}
+
